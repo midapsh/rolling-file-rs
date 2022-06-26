@@ -34,9 +34,19 @@ let file_appender = BasicRollingFileAppender::new(
 
 Must pass latest stable clippy, be formatted with nightly rustfmt, and pass unit tests:
 
-```
+```shell
 cargo +nightly fmt
-cargo clippy --all-targets
+# Should fix warning before using it
+# cargo clippy --all-targets
+cargo test
+```
+
+For Windows, it should be the same:
+
+```bat
+cargo +nightly fmt
+REM Should fix warning before using it
+REM cargo clippy --all-targets
 cargo test
 ```
 
